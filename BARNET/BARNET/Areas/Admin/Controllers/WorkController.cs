@@ -13,12 +13,12 @@ namespace BARNET.Areas.Admin.Controllers
 {
     [Area("Admin")]
 
-    public class ServiceController : Controller
+    public class WorkController : Controller
     {
         private readonly BARNETDB _context;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ServiceController(BARNETDB context, IWebHostEnvironment webHostEnvironment)
+        public WorkController(BARNETDB context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
             _webHostEnvironment = webHostEnvironment;
@@ -27,7 +27,7 @@ namespace BARNET.Areas.Admin.Controllers
         public IActionResult Index()
         {
             VmService model = new VmService();
-            model.Services = _context.Services.ToList();
+            model.Works = _context.Works.ToList();
 
 
             return View(model);
@@ -38,7 +38,7 @@ namespace BARNET.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Service model)
+        public IActionResult Create(Work model)
         {
             if (ModelState.IsValid)
             {
@@ -53,7 +53,7 @@ namespace BARNET.Areas.Admin.Controllers
                             model.ImageFile.CopyTo(stream);
                         }
                         model.Image = fileName;
-                        _context.Services.Add(model);
+                        _context.Works.Add(model);
                         _context.SaveChanges();
                         return RedirectToAction("Index");
                     }
@@ -74,11 +74,11 @@ namespace BARNET.Areas.Admin.Controllers
         }
         public IActionResult Update(int id)
         {
-            return View(_context.Services.Find(id));
+            return View(_context.Works.Find(id));
         }
 
         [HttpPost]
-        public IActionResult Update(Service model)
+        public IActionResult Update(Work model)
         {
             if (model.ImageFile != null)
             {
@@ -95,7 +95,7 @@ namespace BARNET.Areas.Admin.Controllers
                                 model.ImageFile.CopyTo(stream);
                             }
                             model.Image = fileName;
-                            _context.Services.Update(model);
+                            _context.Works.Update(model);
                             _context.SaveChanges();
                             return RedirectToAction("Index");
                         }
@@ -120,8 +120,8 @@ namespace BARNET.Areas.Admin.Controllers
         }
         public IActionResult Delete(int id)
         {
-            Service service = _context.Services.Find(id);
-            _context.Services.Remove(service);
+            Work work = _context.Works.Find(id);
+            _context.Works.Remove(work);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
