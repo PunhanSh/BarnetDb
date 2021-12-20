@@ -1,6 +1,7 @@
-﻿using BARNET.Models;
+﻿using BARNET.BARNETDBContext;
+using BARNET.Models;
+using BARNET.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,11 +12,11 @@ namespace BARNET.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly BARNETDB _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(BARNETDB context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()

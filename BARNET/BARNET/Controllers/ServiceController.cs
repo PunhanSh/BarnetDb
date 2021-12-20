@@ -18,9 +18,9 @@ namespace BARNET.Controllers
         public IActionResult Index()
         {
             VmService model = new VmService();
-            model.Page = _context.Pages.FirstOrDefault();
             model.Services = _context.Services.ToList();
             model.Setting = _context.Settings.FirstOrDefault();
+            model.Page = _context.Pages.FirstOrDefault();
             model.Socials = _context.Socials.ToList();
             model.Subscribe = _context.Subscribes.FirstOrDefault();
             model.Works = _context.Works.ToList();

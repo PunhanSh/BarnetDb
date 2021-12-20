@@ -1,5 +1,4 @@
-﻿@model VmService
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <!-- Mirrored from html.commonsupport.xyz/2019/Barnet/blog-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Dec 2021 10:21:25 GMT -->
@@ -15,6 +14,7 @@
     <!-- Fav Icons -->
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -42,18 +42,19 @@
                         <!--Top Left-->
                         <div class="top-left float-sm-left">
                             <div class="social-links clearfix">
-                                @foreach (var item in Model.Socials)
-                                {
-                                    <a href="@item.Link"><span class="@item.Icon"></span></a>
-                                }
+                                <a href="#"><span class="fab fa-facebook-f"></span></a>
+                                <a href="#"><span class="fab fa-twitter"></span></a>
+                                <a href="#"><span class="fab fa-linkedin-in"></span></a>
+                                <a href="#"><span class="fab fa-pinterest"></span></a>
+                                <a href="#"><span class="fab fa-vimeo-v"></span></a>
                             </div>
                         </div>
 
                         <!--Top Right-->
                         <div class="top-right float-sm-right">
                             <ul class="topbar-info">
-                                <li><a href="#"><i class="fa fa-phone"></i>@Model.Setting.Phone</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i>@Model.Setting.Mail</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>(251) 235-3256</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i>info@barnet.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -110,10 +111,10 @@
                                                 <li><a href="error.html">404 Page</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown">
+                                        <li class="current dropdown">
                                             <a href="#">Services</a>
                                             <ul>
-                                                <li><a asp-controller="Service" asp-action="Index">Services One</a></li>
+                                                <li><a href="services.html">Services One</a></li>
                                                 <li><a href="services-2.html">Services Two</a></li>
                                                 <li><a href="services-3.html">Services Three</a></li>
                                                 <li><a href="service-details.html">Market Growthing</a></li>
@@ -145,13 +146,13 @@
                                                 <li><a href="checkout.html">Checkout</a></li>
                                             </ul>
                                         </li>
-                                        <li class="current dropdown">
-                                            <a asp-controller="Blog" asp-action="Index">Blog</a>
+                                        <li class="dropdown">
+                                            <a href="#">Blog</a>
                                             <ul>
-                                                <li><a asp-controller="Blog" asp-action="Index">Blog Grid</a></li>
-                                                <li><a asp-controller="Blog" asp-action="Index">Blog Sidebar</a></li>
-                                                <li><a asp-controller="Blog" asp-action="Index">Blog Clasic</a></li>
-                                                <li><a asp-controller="BlogDetail" asp-action="Index">Blog Details</a></li>
+                                                <li><a href="blog-1.html">Blog Grid</a></li>
+                                                <li><a href="blog-2.html">Blog Sidebar</a></li>
+                                                <li><a href="blog-3.html">Blog Clasic</a></li>
+                                                <li><a href="blog-details.html">Blog Details</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact.html">Contact</a></li>
@@ -227,7 +228,7 @@
                                                 <li><a href="error.html">404 Page</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown">
+                                        <li class="current dropdown">
                                             <a href="#">Services</a>
                                             <ul>
                                                 <li><a href="services.html">Services One</a></li>
@@ -262,7 +263,7 @@
                                                 <li><a href="checkout.html">Checkout</a></li>
                                             </ul>
                                         </li>
-                                        <li class="current dropdown">
+                                        <li class="dropdown">
                                             <a href="#">Blog</a>
                                             <ul>
                                                 <li><a href="blog-1.html">Blog Grid</a></li>
@@ -325,7 +326,8 @@
                                 </div>
                                 <div class="widget-content">
                                     <div class="text">
-                                        <p>@Model.Setting.FooterContent</p>
+                                        <p>Lorem ipsum dolor amet consecte adipisicing elit sed eiusm tempor incididunt ut labore dolore magna aliqua enim ad minim veniam. quis nostrud exercitation ullam</p>
+                                        <p>Duis aute irure dolor in reprehend it in voluptate velit  cillum.dolore eu fugiat nulla.</p>
                                     </div>
                                 </div>
                             </div>
@@ -385,15 +387,15 @@
                                 <h4 class="widget-title">Contact Info</h4>
 
                                 <ul class="contact-info-list">
-                                    <li>@Model.Setting.Address</li>
-                                    <li>@Model.Setting.Phone</li>
-                                    <li>@Model.Setting.Mail</li>
+                                    <li>Flat 20, Reynolds Neck, North Hele <br>naville, FV77 8WS</li>
+                                    <li>+2(305) 587-3407</li>
+                                    <li>info@barnet.com</li>
                                 </ul>
                                 <ul class="social-link clearfix">
-                                    @foreach (var item in Model.Socials)
-                                    {
-                                        <li><a href="@item.Link"><span class="@item.Icon"></span></a></li>
-                                    }
+                                    <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -408,7 +410,7 @@
                     <div class="clearfix">
                         <div class="float-sm-left">
                             <div class="copyright-text">
-                                <p><a asp-controller="Home" asp-action="Index">Barnet</a> © 2019 All Right Reserved</p>
+                                <p><a href="index.html">Barnet</a> © 2019 All Right Reserved</p>
                             </div>
                         </div>
                         <div class="float-sm-right">

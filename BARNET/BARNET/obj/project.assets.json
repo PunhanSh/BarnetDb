@@ -7153,11 +7153,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TUF DASH\\source\\repos\\BARNET\\BARNET\\BARNET.csproj",
+      "projectUniqueName": "C:\\Users\\TUF DASH\\Desktop\\New folder\\BARNET\\BARNET\\BARNET.csproj",
       "projectName": "BARNET",
-      "projectPath": "C:\\Users\\TUF DASH\\source\\repos\\BARNET\\BARNET\\BARNET.csproj",
+      "projectPath": "C:\\Users\\TUF DASH\\Desktop\\New folder\\BARNET\\BARNET\\BARNET.csproj",
       "packagesPath": "C:\\Users\\TUF DASH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TUF DASH\\source\\repos\\BARNET\\BARNET\\obj\\",
+      "outputPath": "C:\\Users\\TUF DASH\\Desktop\\New folder\\BARNET\\BARNET\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TUF DASH\\AppData\\Roaming\\NuGet\\NuGet.Config",
